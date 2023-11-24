@@ -11,5 +11,8 @@ billionaire's wealth based on certain factors
 
 * There are several billionaires which are significantly wealthier than other (i.e. outliers) as we can see from the
 boxplot
-* The wealthiest 10 billionaires would be 
+
+
+* The wealthiest 10 billionaires would be
+
 ![img.png](img.png)
