@@ -3,6 +3,6 @@ Data Science and Data Engineering projects in R and/or Python combined in one pl
 
 All project folders have a separate README.md inside
 
-|        **Project**         | **Language** | **Libraries + frameworks** |  **Scope**   |           **Description**            |  **Folder**  |
-|:--------------------------:|:------------:|:--------------------------:|:------------:|:------------------------------------:|:------------:|
-| Billionaires data analysis |    Python    |   pandas, numpy, seaborn   | small/medium | Billionaires analysis and regression | Billionaires |
+|        **Project**         | **Language** | **Libraries + frameworks** |   **Scope**    |           **Description**            |  **Folder**  |
+|:--------------------------:|:------------:|:--------------------------:|:--------------:|:------------------------------------:|:------------:|
+| Billionaires data analysis |    Python    |   pandas, numpy, seaborn   | small / medium | Billionaires analysis and regression | Billionaires |
