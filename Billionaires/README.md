@@ -18,7 +18,7 @@ boxplot
 
 ![img_2.png](img_2.png)
 
-* The wealthiest 10 billionaires would be
+* The 10 wealthiest billionaires would be
 
 ![img.png](img.png)
 
