@@ -22,6 +22,19 @@ boxplot
 
 ![img.png](img.png)
 
-* The majority of billionaires come from these 3 countries
+* The majority of billionaires come from these countries
 
 ![img_3.png](img_3.png)
+
+* And the majority of wealth is distributed in this way
+
+![img_6.png](img_6.png)
+
+* The majority of billionaires are around 65 years old with 50% falling
+into the range between 56 and 75
+
+![img_4.png](img_4.png)
+
+* And the birth year is around 1960, respectively
+
+![img_5.png](img_5.png)
