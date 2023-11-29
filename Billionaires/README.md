@@ -26,6 +26,10 @@ boxplot
 
 ![img_3.png](img_3.png)
 
+* From the following boxplot we can see that self-made billionaires earn less (although proper statistical test is required)
+
+![img_7.png](img_7.png)
+
 * And the majority of wealth is distributed in this way
 
 ![img_6.png](img_6.png)
