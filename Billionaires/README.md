@@ -43,3 +43,7 @@ into the range between 56 and 75
 * And the birth year is around 1960, respectively
 
 ![img_5.png](img_5.png)
+
+* If we look at the correlations between continuous numerical variables, we'll get the following result
+
+![img_8.png](img_8.png)
