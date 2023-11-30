@@ -26,7 +26,8 @@ boxplot
 
 ![img_3.png](img_3.png)
 
-* From the following boxplot we can see that self-made billionaires earn less (although proper statistical test is required)
+* From the following boxplot we can see that self-made billionaires posses more 
+or less the same amount of wealth (although proper statistical test is required)
 
 ![img_7.png](img_7.png)
 
