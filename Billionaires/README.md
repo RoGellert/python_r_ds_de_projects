@@ -34,9 +34,11 @@ or less the same amount of wealth (although proper statistical test is required)
 * And the majority of wealth is distributed in this way
 
 By countries
+
 ![img_6.png](img_6.png)
 
 And by industries
+
 ![img_9.png](img_9.png)
 
 * The majority of billionaires are around 65 years old with 50% falling
