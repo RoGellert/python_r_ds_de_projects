@@ -5,6 +5,8 @@ Dataset is taken from kaggle: https://www.kaggle.com/datasets/nelgiriyewithana/b
 The idea is to carry out exploratory data analysis and then try to build a regression model attempting to predict
 billionaire's wealth based on certain factors 
 
+I assume the FinalWorth column represents worth in millions 
+
 ### Major takeaways
 
 (Assuming the data from the dataset comes from a trustworthy source)
@@ -40,6 +42,10 @@ By countries
 And by industries
 
 ![img_9.png](img_9.png)
+
+(share of FinalWorth)
+
+![img_10.png](img_10.png)
 
 * The majority of billionaires are around 65 years old with 50% falling
 into the range between 56 and 75
