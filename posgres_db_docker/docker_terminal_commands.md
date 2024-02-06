@@ -122,3 +122,5 @@ INSERT INTO users (first_name, last_name, email, date_of_birth) VALUES
 ('Tony', 'Roberts', 'nlewis@example.org', '2012-02-13'),
 ('Megan', 'Fletcher', 'andrewwilkins@example.com', '1976-08-04');
 ```
+
+Select data: ```SELECT DISTINCT email FROM users;```
