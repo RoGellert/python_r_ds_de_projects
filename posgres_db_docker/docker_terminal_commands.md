@@ -8,8 +8,8 @@ Creating the db in container: ```docker exec -u postgres postgres-db createdb po
 
 Connecting to db in container: ```docker exec -it postgres-db psql -U postgres -d postgres-db```
 
-Create table: 
-```
+### Create table: 
+```SQL
 CREATE TABLE users (
 id SERIAL PRIMARY KEY,
 first_name VARCHAR(50),
@@ -18,7 +18,7 @@ email VARCHAR(100),
 date_of_birth DATE
 );   
 ```
-```
+```SQL
 CREATE TABLE films (
 film_id SERIAL PRIMARY KEY,
 title VARCHAR(255) NOT NULL,
@@ -28,15 +28,28 @@ rating VARCHAR(10),
 user_rating DECIMAL(2,1) CHECK (user_rating >= 1 AND user_rating <= 5)
 );   
 ```
-```
+```SQL
 CREATE TABLE film_category (
 category_id SERIAL PRIMARY KEY,
 film_id INTEGER REFERENCES films(film_id),
 category_name VARCHAR(50) NOT NULL
 );
 ```
-Insert data: 
+```SQL
+CREATE TABLE actors (
+    actor_id SERIAL PRIMARY KEY,
+    actor_name VARCHAR(255) NOT NULL
+);
 ```
+```SQL
+CREATE TABLE film_actors (
+    film_id INTEGER REFERENCES films(film_id),
+    actor_id INTEGER REFERENCES actors(actor_id),
+    PRIMARY KEY (film_id, actor_id)
+);
+```
+### Insert data: 
+```SQL
 INSERT INTO users (first_name, last_name, email, date_of_birth) VALUES
 ('John', 'Doe', 'john.doe@example.com', '1990-01-01'),
 ('Jane', 'Smith', 'jane.smith@example.com', '1992-05-15'),
@@ -53,7 +66,7 @@ INSERT INTO users (first_name, last_name, email, date_of_birth) VALUES
 ('Grace', 'Wright', 'grace.wright@example.com', '1997-05-10'),
 ('William', 'Scott', 'william.scott@example.com', '1986-07-22');
 ```
-```
+```SQL
 INSERT INTO films (title, release_date, price, rating, user_rating) VALUES
 ('Inception', '2010-07-16', 12.99, 'PG-13', 4.8),
 ('The Shawshank Redemption', '1994-09-23', 9.99, 'R', 4.9),
@@ -76,7 +89,7 @@ INSERT INTO films (title, release_date, price, rating, user_rating) VALUES
 ('The Grand Budapest Hotel', '2014-03-28', 10.99, 'R', 4.4),
 ('La La Land', '2016-12-09', 11.99, 'PG-13', 4.5);
 ```
-```
+```SQL
 INSERT INTO film_category (film_id, category_name) VALUES
 (1, 'Sci-Fi'),
 (1, 'Thriller'),
@@ -118,5 +131,56 @@ INSERT INTO film_category (film_id, category_name) VALUES
 (20, 'Drama'),
 (20, 'Music');
 ```
-
+```SQL
+INSERT INTO actors (actor_name) VALUES
+('Leonardo DiCaprio'),  -- Associated with Inception
+('Tim Robbins'),        -- Associated with The Shawshank Redemption
+('Marlon Brando'),      -- Associated with The Godfather
+('Christian Bale'),     -- Associated with The Dark Knight
+('John Travolta'),      -- Associated with Pulp Fiction
+('Keanu Reeves'),       -- Associated with The Matrix
+('Tom Hanks'),          -- Associated with Forrest Gump
+('Tom Hanks'),          -- Associated with Toy Story (Tom Hanks appears twice for demonstration purposes)
+('Sam Neill'),          -- Associated with Jurassic Park
+('Sam Worthington'),    -- Associated with Avatar
+('Ryan Gosling'),       -- Associated with Blade Runner 2049
+('Tom Hardy'),          -- Associated with Mad Max: Fury Road
+('Anthony Gonzalez'),   -- Associated with Coco
+('Fionn Whitehead'),    -- Associated with Dunkirk
+('Shameik Moore'),      -- Associated with Spider-Man: Into the Spider-Verse
+('Song Kang-ho'),       -- Associated with Parasite
+('Miles Teller'),       -- Associated with Whiplash
+('Amy Poehler'),        -- Associated with Inside Out
+('Ralph Fiennes'),      -- Associated with The Grand Budapest Hotel
+('Emma Stone');         -- Associated with La La Land
+```
+```SQL
+INSERT INTO film_actors (film_id, actor_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20);
+```
 Select data: ```SELECT DISTINCT email FROM users;```
+
+### Queries
+
+```SQL
+SELECT MIN(price) as MIN_PRICE, MAX(price) as MAX_PRICE from films;
+```
