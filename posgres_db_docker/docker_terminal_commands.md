@@ -184,3 +184,10 @@ Select data: ```SELECT DISTINCT email FROM users;```
 ```SQL
 SELECT MIN(price) as MIN_PRICE, MAX(price) as MAX_PRICE from films;
 ```
+```SQL
+SELECT F.film_id, F.title, A.actor_name 
+FROM films F
+INNER JOIN film_actors FA on F.film_id = FA.film_id
+INNER JOIN actors A on FA.actor_id = A.actor_id 
+ORDER BY F.film_id;
+```
