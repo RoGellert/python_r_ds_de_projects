@@ -25,7 +25,7 @@ def wait_for_postgres(host, max_retries=5, delay_seconds=5):
 if not wait_for_postgres(host="source_postgres"):
     exit(1)
 
-print("Starting ELT Script...")
+print("Starting ETL Script...")
 
 source_config = {
     'dbname': 'source_db',
@@ -53,6 +53,7 @@ dump_command = [
 subprocess_env_source = dict(PGPASSWORD=source_config['password'])
 
 subprocess.run(dump_command, env=subprocess_env_source, check=True)
+print("Dump complete")
 
 load_command = [
     'psql',
@@ -65,5 +66,6 @@ load_command = [
 subprocess_env_destination = dict(PGPASSWORD=destination_config['password'])
 
 subprocess.run(load_command, env=subprocess_env_destination, check=True)
+print("Script complete")
 
 

@@ -4,4 +4,4 @@ RUN apt-get update && apt-get install -y postgresql-client
 
 COPY etl_script.py .
 
-CMD [ "python", "etl_scipt.py" ]
+CMD ["python", "etl_scipt.py"]
