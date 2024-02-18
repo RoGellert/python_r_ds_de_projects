@@ -1,9 +1,11 @@
-### Postgres database in docker
+### Pipeline between two Postgres Databases (in Docker)
 
-My simple experiments with Postgres database in docker container.
-All commands are in ```docker_terminal_commands.md```. 
-
-In ```fake_data_get.py``` I was experimenting with fake data creation
- 
 Video form FreeCodeCamp was quite helpful in that regard:
-https://www.youtube.com/watch?v=PHsC_t0j1dU&t=9961s 
+https://www.youtube.com/watch?v=PHsC_t0j1dU&t=9961s
+
+A simple python script to extract data from one Postgres database into the other.
+
+Projects involves creation of three docker containers: two for databases and one for the script.
+
+To execute run ```docker compose up``` from the root folder provider docker is installed and running.
+In ```fake_data_get.py``` I was experimenting with fake data creation.

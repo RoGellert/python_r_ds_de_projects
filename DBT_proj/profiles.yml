@@ -1,0 +1,12 @@
+custom_postgres:
+  outputs:
+    dev:
+      dbname: posgres_db
+      host: rogel
+      pass: some_password
+      port: 5434
+      schema: '-'
+      threads: 1
+      type: postgres
+      user: rogel
+  target: dev
