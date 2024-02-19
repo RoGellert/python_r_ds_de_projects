@@ -1,12 +1,13 @@
 custom_postgres:
   outputs:
+
     dev:
-      dbname: posgres_db
-      host: rogel
+      dbname: destination_db
+      host: host.docker.internal
       pass: some_password
       port: 5434
-      schema: '-'
+      schema: public
       threads: 1
       type: postgres
-      user: rogel
+      user: postgres
   target: dev
